@@ -1,1 +1,333 @@
 
+"""import random
+# a1 = list(range(10))
+# b1 = list(range(3, 15, 2))
+# c1 = list(range(3, -5, -1))
+# print(a)
+# print(b)
+# print(c)
+# d1 = [x * 3 for x in range(0, 30, 1) if x % 3 != 0]
+# print(d)
+# k1=[1,2,3,4,6]
+# print(k1[1])
+# a2 = [20, 40]
+# a2.insert(1, 30)
+# print(a2)
+# b2 = a2 * 3
+# print(a2)
+# print(b2)
+# print(id(a2))
+# a2=a2+[50]
+# print(id(a2))
+# c = 'sxt'
+# d = c * 3
+# print(d)
+# a3 = [100, 200, 888, 300, 400]
+# del a3[2]
+# print(a3)
+# b3 = a3.pop()
+# print(a3, "\n", b3)
+# b4 = a3.pop(1)
+# print(a3, "\n", b4)
+# a3.remove(888)
+# print(a3)
+# print(a.index(20))
+# print(a.count(30))
+# print(len(a))
+# print(20 in a)
+# print(a[:4])
+# print(a[1:])
+# print(a[-5:-2])
+# print(a[::-1])
+# print(a[5:100])
+# for k in a:
+#     print("{}".format(k), end=" ")
+# print("\n")
+# list1 = [30, 40, 50]
+# list2 = list1
+# # list2 = [] + list1
+# print(list1)
+# print(list2)
+# print(id(list1))
+# print(id(list2))
+# a.sort()
+# print(a)
+# a.sort(reverse=True)
+# print(a)
+# random.shuffle(a)
+# print(a)
+# a = [10, 20, 30, 40, 50, 20, 30, 60, 30]
+# b=sorted(a)
+# print(a)
+# print(b)
+# c=sorted(a,reverse=True)
+# print(c)
+# print(max(a))
+# a=[
+#     ["高一",19,30000,"北京"],
+#     ["高二",30,51400,"深圳"],
+#     ["高三",22,82044,"天津"]
+# ]
+# print(a[2][3])
+# for k in range(3):
+#     for l in range(4):
+#         print(a[k][l],end="\t")
+#     print()
+# b=40,50,60
+# c=(70,)
+# d=(80)
+# print(type(a))
+# print(type(b))
+# print(type(c))
+# print(type(d))
+# a=(10,20,30)
+# e=tuple([2,5,8])
+# print(e)
+# a=[x for x in range(5)]
+# print(a)
+# b=(x for x in range(5))
+# c=tuple(b)
+# print(c)
+# d=tuple(b)
+# print(d)
+# e=(x for x in range(3))
+# print(e.__next__())
+# print(e.__next__())
+# print(e.__next__())
+# print(e.__next__())
+# a = {'name': 'gaoqi', 'age': 18, }
+# print(a)
+# print(a['name'])
+# b = dict(name='gaoqi')
+# print(b)
+# c = dict([("name", "gaoqi"), ("age", 18), ("job", "programmer")])
+# print(c)
+# k = ["name", "age", "job"]
+# v = ["gaoqi", 18, "programmer"]
+# print(list(zip(k, v)))
+# d = dict(zip(k, v))
+# print(d)
+# f = dict.fromkeys(["name", "age", "job"])
+# print(f)
+# a=[x for x in range(1,10) if x%2==0]
+# print(a)
+#
+# b=[]
+# for x in range(1,10):
+#     if x%2==0:
+#         b.append(x)
+# print(b)
+# cells = [(a,b) for a,b in zip(range(1,10),range(101,110))]
+# for cell in cells:
+#     print(cell)
+# print(cells)
+
+# nums = set([1,2,2,3,3,3,4])
+# print (len(nums))
+# print(nums)
+# print(1.8/2)
+# n = 1000
+# l=0
+# while n > 1:
+#     print(n)
+#     n = n / 2
+#     l+=1
+# print(l)
+# list = ['1', '2', '3', '4', '5']
+# print(list[10:])
+# print(list)
+# print('k'.join(['a','b','c']))
+# print('ll \n'.join(['a','b','c']))
+#
+# from math import *
+
+
+# def isPrime(n):
+#     m = int(sqrt(n)) + 1
+#     for i in range(2, m):
+#         if n % i == 0:
+#             return False
+#     return True
+#
+#
+# def eve(n):
+#     res=['2', '3', '5', '7']
+#     s = str(n)
+#     if s.count(res[0]) + s.count(res[1]) + s.count(res[2]) + s.count(res[3]) == len(s):
+#         return 1
+#     return 0
+#
+#
+# ans = 0
+# for i in range(20230521):
+#     if (isPrime(i)) and eve(i):
+#         ans += 1
+# print(ans)
+"""
+"""题目描述
+小蓝正在学习一门神奇的语言，这门语言中的单词都是由小写英文字母组 成，有些单词很长，远远超过正常英文单词的长度。小蓝学了很长时间也记不住一些单词，他准备不再完全记忆这些单词，而是根据单词中哪个字母出现得最多来分辨单词。
+
+现在，请你帮助小蓝，给了一个单词后，帮助他找到出现最多的字母和这 个字母出现的次数。
+
+输入描述
+输入一行包含一个单词，单词只由小写英文字母组成。
+
+对于所有的评测用例，输入的单词长度不超过 1000。
+
+输出描述
+输出两行，第一行包含一个英文字母，表示单词中出现得最多的字母是哪 个。如果有多个字母出现的次数相等，输出字典序最小的那个。
+
+第二行包含一个整数，表示出现得最多的那个字母在单词中出现的次数。
+import os
+import sys
+
+# 请在此输入您的代码
+a=input()
+b=0
+c=[]
+for i in a:
+  d=a.count(i)
+  if d>=b:
+    b=d
+for i in a:
+  if a.count(i)==b:
+    c.append(i)
+c.sort()
+print(c[0])
+print(b)"""
+# def print_star(n):
+#     print("*"*n)
+# c= print_star
+# c(3)
+# b=c
+# print(b)
+# print(print_star)
+# print(id(print_star))
+# zhengshu=int
+# print(zhengshu("333"))
+"""函数也是对象"""
+"""import time
+a= 1000
+def test_1():
+    start=time.time()
+    a= 1000
+    for i in range(100000000):
+        a+=1
+    end=time.time()
+    print("耗时{}".format((end-start)))
+
+def test_2():
+    start=time.time()
+    c=1000
+    for i in range(100000000):
+        c+=1
+    end = time.time()
+    print("耗时{}".format((end-start)))
+test_1()
+test_2()
+"""
+
+"""def wf(n):
+    print("*"*n)
+wf(4)
+
+def shu(n,m):
+    a = (n+m)/2
+    return a
+print(shu(18,23))
+
+def lie(k):
+    s1="!"*k
+    s2="#"*k
+    return [s1,s2]
+print(lie(6))"""
+"python一切会对象，python中所有的参数传递都是“引用传递”，不是”值传递“"
+"""b= [10,20]
+def f2(m):
+    print("m",id(m))
+    m.append(30)
+
+f2(b)
+print("b",id(b))
+print(b)
+"""
+"""对于不可变对象进行写操作时，会产生一个新的对象空间，并用新的值填充这块空间"""
+"""import time
+a=0
+
+def f1(n):
+    t1 = time.time()
+    while n<1000000000:
+        n+=3
+    t2 = time.time()
+    print(t2 - t1)
+b=[0]
+def f2(n):
+    t3 = time.time()
+    while n<1000000000:
+        n+=3
+    t4 = time.time()
+    print(t4 - t3)
+f1(a)
+f2(b[0])"""
+
+"""浅拷贝会创建一个新对象，但是不会创建子对象，但会引用copy对象的子对像，
+因此在下例中修改b【2】会改变a的值，而在b.append(),后添加数字不会对a也作用"""
+"""
+import copy
+def testCopy():
+    '''测试浅拷贝'''
+    a=[10,20,[5,6]]
+    b=copy.copy(a)
+    print("a",a)
+    print("b",b)
+    b.append(30)
+    b[2].append(7)
+    print("浅拷贝......")
+    print("a",a)
+    print("b",b)
+
+def testDeepCopy():
+        '''测试深拷贝'''
+        a=[10,20,[5,6]]
+        b=copy.deepcopy(a)
+        print("a",a)
+        print("b",b)
+        b.append(30)
+        b[2].append(7)
+        print("深拷贝......")
+        print("a", a)
+        print("b", b)
+
+testCopy()
+print("________________")
+testDeepCopy()"""
+"""传递不可变对象时，如果不可变对象中包含的子对象是可变的，则方法内修改了之歌可变对象，源对象也发生了变化"""
+"""a=(10,20,[5,6])
+print("a:",id(a))
+
+def test_1(m):
+    print("m:",id(m))
+    m[2][0]=888
+    print(m)
+    print("m:",id(m))
+test_1(a)"""
+"""参数类型：
+位置参数：函数调用时，实参默认按位置顺序传递，需要个数和形式参数匹配。按位置传递参数，称为：位置参数
+默认值参数：为某些参数设置默认值，这样这些参数是可选的，在传参时这些参数可以不赋值
+命名参数:按照名称进行传参，在传参时明确写出：如C=8。也成为关键字参数
+可变参数：可变数量参数{*（一个星号表示将多个参数收集到一个元组中。）}{**（两个星号表示将多个参数收集到一个字典对象中）}
+强制命名参数
+"""
+"""def f1(a,b,c):
+    print(a,b,c)
+f1(20,30,40)
+# f1(20)/位置参数不可以缺
+def f2(a,b,c=20,d=40):
+    print(a,b,c,d)
+f2(90,89)
+f2(89,9,398,90)
+def f3(a,b,c):
+    print(a,b,c)
+f3(c=30,b=28,a=19)
+"""
