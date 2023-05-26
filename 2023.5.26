@@ -1,0 +1,51 @@
+def d1():
+#     print("fi")
+#     d2()
+#
+# def d2():
+#     print("f2")
+#     d1()
+#
+# d1()
+"""def f1(n):
+    print("start:"+str(n))
+    if n ==1:
+        print("recursion over")
+    else:
+        f1(n-1)
+    print("end"+str(n))
+f1(5)
+def jiecheng(n):
+    if n==1:
+        return 1
+    else:
+        return n*jiecheng(n-1)
+
+print(jiecheng(5))
+def jiecheng(n):
+    if n==1:
+        return 1
+    else:
+        return n*jiecheng(n-1)
+
+print(jiecheng(5))
+def outf():
+    print("outer running!!!")
+    def inter():
+        print("neibuhanshu")
+    inter()
+outf()"""
+def printName(ischanesename,name,familyname):
+    ak=10
+    def intername(a,b):
+        nonlocal ak
+        print(ak)
+        ak=20
+        print(ak)
+        print("{0} {1}".format(a,b))
+    if ischanesename:
+        intername(familyname,name)
+    else:
+        intername(name,familyname)
+printName(True,"鑫烨","张")
+printName(False,"qiaozhi","yuehan")
