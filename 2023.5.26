@@ -1,3 +1,13 @@
+eval(s)
+s ="print('abcede')"
+a=10
+b=20
+c=eval("a+b")
+print(c)
+dict1=dict(a=100,b=200)
+print(dict1)
+d=eval("a+b",dict1)
+print(d)
 def d1():
 #     print("fi")
 #     d2()
