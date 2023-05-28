@@ -1,0 +1,31 @@
+def printName(ischanesename,name,familyname):
+    ak=10
+    def intername(a,b):
+        nonlocal ak
+        print(ak)
+        ak=20
+        print(ak)
+        print("{0} {1}".format(a,b))
+    if ischanesename:
+        intername(familyname,name)
+    else:
+        intername(name,familyname)
+printName(True,"xy","z")
+printName(False,"qiaozhi","yuehan")
+class Student:
+    def __init__(k,name,score):
+        k.name=name
+        k.score=score
+    def __init2__(self,k1,k2):
+        self.k1=k1
+        self.k2=k2
+    def say_score(self):
+        print("{0}的分数是{1}".format(self.name,self.score))
+
+
+s1=Student("张三",80)
+print(s1.name,s1.score)
+print(s1)
+s1.say_score()
+s2=Student("李四",90)
+print(s2.name,s2.score)
