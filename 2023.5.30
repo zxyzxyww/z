@@ -1,0 +1,18 @@
+import jieba
+from PIL import Image
+import wordcloud
+import numpy as np
+
+font = 'C:/Windows/Fonts/simkai'
+mk = np.array(Image.open("C:\\Users\86150\\Desktop\\R2.jpg"))
+file = open("C:\\Users\\86150\\Desktop\\新时代中国特色社会主义.txt", "r", encoding='utf-8').read()
+
+stopwords = ['的','我','是','在']
+seg_list = jieba.cut(file)
+seg_filtered = [word for word in seg_list if word not in stopwords]
+file_filtered = ' '.join(seg_filtered)
+
+w = wordcloud.WordCloud(font_path=font, mask=mk, max_words=500, background_color='white')
+
+w.generate(file_filtered)
+w.to_file('C:/Users/86150/Desktop/ciyunfeng.jpg')
