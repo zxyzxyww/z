@@ -1,0 +1,36 @@
+class Student:
+    company = '尚学堂'
+    count= 0
+
+    def __init__(self,name,score):
+        self.name=name
+        self.score=score
+        Student.count=Student.count+1
+
+    def say_score(self):
+        print(Student.company)
+        print(self.name,self.score)
+
+s1=Student('高其',80)
+s2=Student('张三',70)
+s1.say_score()
+print("一共创建{}个Student对象".format(Student.count))
+
+
+class Student:
+    company='SXT'
+
+    def __init__(self,name):
+        self.name=name
+
+    @classmethod
+    def printCompany(cls):
+        print(cls.company)
+
+    @staticmethod
+    def add(a,b):
+        print("{}+{}={}".format(a,b,(a+b)))
+        return a+b
+
+Student.printCompany()
+Student.add(30,40)
