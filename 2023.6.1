@@ -1,0 +1,32 @@
+class Person:
+    def work(self):
+        print("nvlishangban")
+
+def play_game(self):
+    print("play game")
+
+def work2(s):
+    print('work hard')
+Person.play=play_game
+Person.work=work2
+
+p=Person()
+p.play()
+p.work()
+
+class Employee:
+    __company="bzcxy"
+
+    def __init__(self,name,age):
+        self.name=name
+        self.__age=age
+
+    def say_company(self):
+        print("我的年龄是",Employee.__company)
+        print("我的年龄是",self.__age)
+
+print(dir(Employee))
+print(Employee._Employee__company)
+a=Employee("gaoqi",18)
+a.say_company()
+print(a._Employee__age)
