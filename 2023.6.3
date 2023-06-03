@@ -1,0 +1,73 @@
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.__age=age
+
+    def __str__(self):
+        print("return write __str__ fouction")
+        return "名字是：{},年龄是{}".format(self.name,self.__age)
+
+p=Person("高其",18)
+print(p)
+s=str(p)
+print(s)
+class A:
+    def __init__(self):
+        print("aa")
+    def say(self):
+        print("A",self)
+        print("say AAA")
+class B(A):
+    def __init__(self):
+        #A.__init__(self)_
+        super(B,self).__init__()
+        print("bb")
+    def say(self):
+        #A.say(self)    #调用父类的方法
+        super().say()
+        print("say BBB")
+class C(B,A):
+    def cc(self):
+        print("cc")
+
+b=B()
+b.say
+
+class Animal:
+    def shout(self):
+        print("动物几哦了一声")
+
+class Dog(Animal):
+    def shout(self):
+        print("汪汪汪")
+class Cat(Animal):
+    def shout(self):
+        print("喵喵喵")
+
+def animalShout(a):
+    a.shout()
+
+animalShout(Dog())
+animalShout(Cat())
+
+class Person:
+    def __init__(self,name):
+        self.name=name
+
+    def __add__(self,other):
+        if isinstance(other,Person):
+            return "{0}-----{1}".format(self.name,other.name)
+        else:
+            return "输入错误"
+    def __mul__(self,other):
+        if isinstance(other,int):
+            return self.name * other
+        else:
+            return "输入错误"
+
+p1=Person("张三")
+p2=Person("李四五")
+
+x=p1+p2
+print(x)
+print(p1*3)
