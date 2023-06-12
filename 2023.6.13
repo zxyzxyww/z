@@ -1,0 +1,35 @@
+# 12. 给你两个整数a和b（-10000<a,b<10000），请你判断是否存在两个整数，他们的和为a，乘积为b。 若存在，输出Yes,否则输出No。
+# 【输入示例】a=9,b=15
+# 【输出示例】No
+
+a = eval(input("请输入a: "))
+b = eval(input("请输入b: "))
+x = a
+if x > 0:
+    y1 = b / a
+    y2 = 0
+elif x < 0:
+    y1 = 2 * x
+    y2 = -(b / a)
+if (type(x) == int and type(y1) == int) and type(y2) == int:
+    print("Yes")
+else:
+    print("No")
+
+# 输入a和b
+a = eval(input("请输入a: "))
+b = eval(input("请输入b: "))
+
+# 判断是否存在两个整数，他们的和为a，乘积为b
+found = False
+for x in range(min(abs(a), abs(b)), max(abs(a), abs(b))+1):
+    y = b / x
+    if x + y == a and y.is_integer():
+        found = True
+        break
+
+# 输出结果
+if found:
+    print("Yes")
+else:
+    print("No")
