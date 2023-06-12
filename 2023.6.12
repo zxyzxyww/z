@@ -1,0 +1,218 @@
+1、
+1. 回文数判断。设n是一任意自然数，如果n的各位数字反向排列所得自然数与n相等，则n被称为回文数。从键盘输入一个数字，请编写程序判断这个数字是不是回文数，若是返回True，否则返回False。
+【输入示例】12321
+【输出示例】True
+
+n=input("")
+m=n[::-1]
+if n==m:
+    print(True)
+else:
+    print(False)
+2、2. 素数判断。编写一个函数isPrime(x)，接受一个正整数作为参数，并判断该数是否为素数（只能被1和自身整除）,若是返回True，否则返回False。
+【输入示例】3
+【输出示例】True
+
+def isPrime(x):
+#     k=int(pow(x,0.5))+1
+#     print(k)
+#     m=0
+#     for i in range(2,k):
+#         if x%i==0:
+#             m=1
+#         else:
+#             pass
+#     if m!=0:
+#         return print(False)
+#     else:
+#         return print(True)
+#
+# x=eval(input())
+# isPrime(x)
+3. 统计字母出现次数。编写一个函数，接受一个字符串作为参数，并统计每个字母出现的次数，然后返回一个字典，字典的键为字母，值为出现的次数。
+【输入示例】'abb'
+【输出示例】{'a': 1, 'b': 2}
+
+# def k(s):
+#     k={}
+#     for i in s:
+#         k[i]=s.count(i)
+#     return k
+#
+# s=input()
+# m=k(s)
+# print(m)
+
+
+4. 判断列表是否有重复元素。编写一个函数，接受一个列表作为参数，并判断该列表中是否有重复的元素，若有返回True，否则返回False。
+【输入示例】[1,2,3,4,5,3]
+【输出示例】True
+
+# def l(m):
+#     k=0
+#     for i in m:
+#         for j in m:
+#             if i==j:
+#                 k+=1
+#     n=len(m)
+#     if n==k:
+#         return print(False)
+#     else:
+#         return print(True)
+# li=[1,2,3,4,5,3]
+# l(li)
+
+5. 计算列表中的平均值。给定一个包含数字的列表，请编写程序来计算列表中所有数字的平均值。
+【输入示例】[1,2,3,4,5]
+【输出示例】3
+
+
+# li=[1,2,3,4,5]
+# k=len(li)
+# m=0
+# for i in range(k):
+#     m+=li[i]
+# p=m/k
+# print(p)
+
+# 6. 反转整数。编写一个函数，接受一个整数作为参数，并返回该整数的反转形式。
+# 【输入示例】123
+# 【输出示例】321
+li=[]
+def fan(m):
+    while m!=0:
+        li.append(m%10)
+        m=m//10
+    for i in li[::]:
+        print(i,end='')
+
+m=eval(input())
+fan(m)
+
+# 7. 统计字符串中的元音字母个数。从键盘输入一串字符串，统计该字符串中元音字母（a、e、i、o、u）
+# 的个数。
+# 【输入示例】'abe'
+# 【输出示例】2
+string='aeiouAEIOU'
+k=input()
+m=0
+z=0
+for i in k:
+    if i in string:
+        m+=1
+    else:
+        z+=1
+print(m)
+
+# 8. 统计水仙花数。“水仙花数”是指一个三位数中各个数位上数字的立方和等于该数本身。
+# 例如153是一个水仙花数，因为153=13+53+33。
+# 编写程序，计算200到500之间的水仙花数共有多少个。
+def shui():
+    m=0
+    for i in range(200,501):
+        k = []
+        l=i
+        while i!=0:
+            k.append(i%10)
+            i=i//10
+        if ((k[0]**3)+(k[1]**3)+(k[2]**3))==l:
+            m+=1
+    print(m)
+
+shui()
+
+# 统计水仙花数的个数
+count = 0
+
+# 遍历200到500之间的每个数字
+for num in range(200, 501):
+    # 将数字转换为字符串，然后分别取出各个位上的数字
+    digits = [int(digit) for digit in str(num)]
+    # 计算各个位上数字的立方和
+    sum_of_cubes = sum([digit**3 for digit in digits])
+    # 判断是否为水仙花数
+    if num == sum_of_cubes:
+        count += 1
+
+# 输出统计结果
+print("200到500之间的水仙花数的个数为：", count)
+
+# 9. 字符串分隔打印。获得用户输入的一个字符串（包含空格），将该字符串按照空格分割，并逐行打印。
+# 【输入示例】'Python XYU 666'
+# 【输出示例】Python
+# XYU
+# 666
+
+m=input()
+for i in m:
+    if i!=" ":
+        print(i,end= '')
+    else :
+        print("\n")
+
+# 10. ⼀球从100⽶⾼度⾃由落下，每次落地后反跳回原⾼度的⼀半，再落下。
+# 求它在第10次落地时，共经过多少⽶？第10次反弹多⾼？
+# 【输出示例】⼀共经过299.71⽶，第10次反弹的⾼度是0.10。
+# （提示：注意字符串的格式化输出）
+m=eval(input())
+k=10
+l=0
+while k!=0:
+    if k==10:
+        l += m
+    else:
+        l+=2*m
+    m=m/2
+    k-=1
+
+print("⼀共经过{:.2f}⽶，第10次反弹的⾼度是{:.2f}".format(l,m))
+
+# 初始化小球的高度和经过距离
+height = 100.0
+total_distance = 100.0
+
+# 计算小球第10次反弹的高度和经过距离
+for i in range(1, 10):
+    height /= 2
+    total_distance += height * 2
+
+# 计算第10次反弹的高度
+tenth_bounce_height = height / 2
+
+# 输出结果
+print("第10次落地时，共经过{:.2f}米，第10次反弹的高度是{:.2f}米。".format(total_distance, tenth_bounce_height))
+
+import math
+
+# 计算小球第10次落地时的高度和经过距离
+h_10 = 100 / math.pow(2, 9)
+d_10 = 100 + 100 * (1 + 1/2 + 1/4 + 1/8 + 1/16 + 1/32 + 1/64 + 1/128 + 1/256 + 1/512)
+
+# 计算第10次反弹的高度
+tenth_bounce_height = h_10 / 2
+
+# 输出结果
+print("第10次落地时，共经过{:.2f}米，第10次反弹的高度是{:.2f}米。".format(d_10, tenth_bounce_height))
+
+# 11. 给定两个正整数a, b (1<=a <= b<=10^5), 请你数出在a到b之间，十个阿拉伯数字分别出现了多少次。\
+# 比如，当a=11, b=20时，a和b之间的数有[11,12,13,14,15,16,17,18,19,20]，那么0-9这10个数出现的次数分别是1,10,2,1,1,1,1,1,1,1。
+# 现在给你a和b，请你输出十个阿拉伯数字分别出现的次数；
+# 分十行输出，第一行表示0出现的次数，第二行表示1出现的次数，....,最后一行表示9出现的次数。
+# 【输入示例】a =11,b =20
+# 【输出示例】1, 10, 2, 1, 1, 1, 1, 1, 1, 1（按行输出）
+
+
+a=eval(input("请输入a: "))
+b=eval(input("请输入b: "))
+if a<1:
+    a = eval(input("请输入a: "))
+elif b>100000:
+    b = eval(input("请输入b: "))
+k=[]
+for i in range(a,b+1):
+    while i!=0:
+        k.append(i%10)
+        i=i//10
+k.sort(reverse=True)
+for i in set(k):
+    print("{}".format(k.count(i)))
